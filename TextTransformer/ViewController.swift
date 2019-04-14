@@ -38,7 +38,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
             output.stringValue = zalgo(input.stringValue)
         }
     }
-        
+    
     @IBAction func copyToPasteboard(_ sender: Any) {
         NSPasteboard.general.clearContents()
         NSPasteboard.general.setString(output.stringValue, forType: .string)
@@ -53,6 +53,11 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     }
     
     func similar(_ input: String) -> String {
+        var output = input
+        output = output.replacingOccurrences(of: "a", with: "а")
+        output = output.replacingOccurrences(of: "e", with: "е")
+        output = output.replacingOccurrences(of: "i", with: "і")
+        output = output.replacingOccurrences(of: "T", with: "Т")
         return "similar: " + input
     }
     
