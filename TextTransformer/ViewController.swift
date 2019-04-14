@@ -38,8 +38,10 @@ class ViewController: NSViewController, NSTextFieldDelegate {
             output.stringValue = zalgo(input.stringValue)
         }
     }
-    
+        
     @IBAction func copyToPasteboard(_ sender: Any) {
+        NSPasteboard.general.clearContents()
+        NSPasteboard.general.setString(output.stringValue, forType: .string)
     }
     
     func controlTextDidChange(_ obj: Notification) {
@@ -55,7 +57,14 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     }
     
     func strike(_ input: String) -> String {
-        return "strike: " + input
+        var output = ""
+        
+        for letter in input {
+            output.append(letter)
+            output.append("\u{0335}")
+        }
+        
+        return output
     }
     
     func zalgo(_ input: String) -> String {
