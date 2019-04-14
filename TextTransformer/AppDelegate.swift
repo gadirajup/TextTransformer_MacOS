@@ -14,7 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        statusItem.button?.title = "🔥"
+        statusItem.button?.title = "💩"
         statusItem.button?.target = self
         statusItem.button?.action = #selector(showSettings)
         
