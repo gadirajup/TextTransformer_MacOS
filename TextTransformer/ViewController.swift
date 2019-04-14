@@ -14,6 +14,8 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     @IBOutlet weak var type: NSSegmentedControl!
     @IBOutlet weak var output: NSTextField!
     
+    let zalgoCharacters = ZalgoCharacters()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -58,7 +60,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
         output = output.replacingOccurrences(of: "e", with: "е")
         output = output.replacingOccurrences(of: "i", with: "і")
         output = output.replacingOccurrences(of: "T", with: "Т")
-        return "similar: " + input
+        return output
     }
     
     func strike(_ input: String) -> String {
@@ -73,8 +75,29 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     }
     
     func zalgo(_ input: String) -> String {
-        return "zalgo: " + input
+        var output = ""
+        for letter in input {
+            output.append(letter)
+            for _ in 1...Int.random(in: 1...8) {
+                output.append(zalgoCharacters.above.randomElement())
+            }
+            
+            for _ in 1...Int.random(in: 1...3) {
+                output.append(zalgoCharacters.inline.randomElement())
+            }
+            
+            for _ in 1...Int.random(in: 1...8) {
+                output.append(zalgoCharacters.below.randomElement())
+            }
+        }
+        return output
     }
-    
+}
+
+extension String {
+    mutating func append (_ str: String?) {
+        guard let str = str else { return }
+        append(str)
+    }
 }
 

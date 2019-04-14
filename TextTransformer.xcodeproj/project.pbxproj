@@ -11,6 +11,9 @@
 		A4CF84252263BA4E0070B565 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CF84242263BA4E0070B565 /* ViewController.swift */; };
 		A4CF84272263BA4F0070B565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4CF84262263BA4F0070B565 /* Assets.xcassets */; };
 		A4CF842A2263BA4F0070B565 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4CF84282263BA4F0070B565 /* Main.storyboard */; };
+		A4CF84332263CA8B0070B565 /* zalgo.json in Resources */ = {isa = PBXBuildFile; fileRef = A4CF84322263CA8B0070B565 /* zalgo.json */; };
+		A4CF84352263CAEC0070B565 /* ZalgoCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CF84342263CAEC0070B565 /* ZalgoCharacters.swift */; };
+		A4CF84372263CD120070B565 /* ROT13.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CF84362263CD120070B565 /* ROT13.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		A4CF84292263BA4F0070B565 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4CF842B2263BA4F0070B565 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4CF842C2263BA4F0070B565 /* TextTransformer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TextTransformer.entitlements; sourceTree = "<group>"; };
+		A4CF84322263CA8B0070B565 /* zalgo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = zalgo.json; sourceTree = "<group>"; };
+		A4CF84342263CAEC0070B565 /* ZalgoCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZalgoCharacters.swift; sourceTree = "<group>"; };
+		A4CF84362263CD120070B565 /* ROT13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROT13.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,9 @@
 			children = (
 				A4CF84222263BA4E0070B565 /* AppDelegate.swift */,
 				A4CF84242263BA4E0070B565 /* ViewController.swift */,
+				A4CF84362263CD120070B565 /* ROT13.swift */,
+				A4CF84342263CAEC0070B565 /* ZalgoCharacters.swift */,
+				A4CF84322263CA8B0070B565 /* zalgo.json */,
 				A4CF84262263BA4F0070B565 /* Assets.xcassets */,
 				A4CF84282263BA4F0070B565 /* Main.storyboard */,
 				A4CF842B2263BA4F0070B565 /* Info.plist */,
@@ -123,6 +132,7 @@
 			files = (
 				A4CF84272263BA4F0070B565 /* Assets.xcassets in Resources */,
 				A4CF842A2263BA4F0070B565 /* Main.storyboard in Resources */,
+				A4CF84332263CA8B0070B565 /* zalgo.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4CF84352263CAEC0070B565 /* ZalgoCharacters.swift in Sources */,
 				A4CF84252263BA4E0070B565 /* ViewController.swift in Sources */,
 				A4CF84232263BA4E0070B565 /* AppDelegate.swift in Sources */,
+				A4CF84372263CD120070B565 /* ROT13.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
